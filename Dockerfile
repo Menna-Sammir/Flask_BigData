@@ -5,8 +5,9 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy requirements and install dependencies
-COPY requirements.txt .
+COPY requirements.fly.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
+
 
 # Copy your app code (assuming your app is in src/)
 COPY src/ ./src
